@@ -17,18 +17,21 @@ function App() {
   const [dateSlider, setDateSlider] = useState(true);
   const [message, setMessage] = useState("Next Day Available on Fri, 06");
   const [time, setTime] = useState("");
+  // Handles Click on Right arrow
   const increaseHandler = () => {
     setDate("Tommorow 06");
     setShowNoSlot(false);
     setShowSlots(true);
     setMessage("Next");
   };
+  // Handles Click on left arrow
   const decreaseHandler = () => {
     setDate("Today 05");
     setShowSlots(false);
     setShowNoSlot(true);
     setMessage("Next Day Available on Fri, 06");
   };
+  // Handles click on time slots
   const clickHandler = (time) => {
     setShowForm(true);
     setShowSlots(false);
@@ -36,32 +39,13 @@ function App() {
     setMessage("Confirm Booking");
     setTime(time);
   };
+  // Handles click on back button
   const backHandler = () => {
     setShowForm(false);
     setDateSlider(true);
     increaseHandler();
   };
   return (
-    // <>
-    //   <div className="App"></div>
-    //   <a href="#" className="back-btn">
-    //     <ArrowBackIcon />
-    //     Select a Time Slot
-    //   </a>
-    //   <Card>
-    //     <img
-    //       src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
-    //       alt="Avatar"
-    //       className="avatar"
-    //     />
-    //     <h3>Mr Swami</h3>
-    //     <hr />
-    //     <h2>this is a card</h2>
-    //     <ChevronRightIcon />
-    //     <ChevronLeftIcon />
-    //     <Button>Button</Button>
-    //   </Card>
-    // </>
     <>
       <div
         className="container-fluid"
