@@ -77,6 +77,7 @@ const Slots = (props) => {
             borderRadius: "5px",
             position: "relative",
             fontSize: "14px",
+            background: "#FBFBFB",
           }}
         >
           <div className="row">
@@ -155,6 +156,7 @@ const Slots = (props) => {
             borderRadius: "5px",
             position: "relative",
             fontSize: "14px",
+            background: "#FBFBFB",
           }}
         >
           <div className="row">
